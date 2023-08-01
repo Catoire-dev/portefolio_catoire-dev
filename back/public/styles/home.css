@@ -1,0 +1,8 @@
+#home {
+    padding: 15px;
+    margin-top: 80px;
+}
+
+#home > h2 {
+    font-size: 1.5em;
+}

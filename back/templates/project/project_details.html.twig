@@ -1,0 +1,21 @@
+{% extends "project/project.html.twig" %}
+
+{% block title %}{{p.name}}{% endblock %}
+
+{% block content %}
+    {# {{dump(p)}} #}
+    <section id="project-details" class="box">
+
+        <div id="title-box" class="box border-red">
+            <h1>{{p.name}}</h1>
+            <p class="date">{{p.date|date("m/Y") }}</p>
+        </div>
+        <div id="project-content">    
+            <img class="border-red" src="{{p.img}}" alt="Visuel du projet {{p.name}}">
+            <p>{{p.description}}</p>
+        </div>
+        <a href="{{p.link}}" target="_blank">Voir le projet en live</a>
+        
+    </section>
+
+{% endblock content %}

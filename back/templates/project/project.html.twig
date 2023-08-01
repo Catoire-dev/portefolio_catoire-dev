@@ -1,0 +1,25 @@
+{% extends "base.html.twig" %}
+
+{% block css %}<link rel="stylesheet" href="/styles/project.css">{% endblock css %}
+
+{% block title %}Projets{% endblock %}
+
+{% block main %}
+    <section id="project-main" class="box">
+        {% block content %}
+            <h1>Voici mes projects de merde</h1>
+            <section id="project-list">
+                {% for p in projects %}
+                
+                <div class="project box">
+                    <h2>{{p.name}}</h2>
+                    <p>{{p.short}}</p>
+                    <a href="{{path('app_project_details', {id:p.id})}}">
+                        <img src="{{p.thumbnail}}" alt="Miniature du project : {{p.name}}">
+                    </a>
+                    </div>
+                {% endfor %}
+            </section>
+        {% endblock content %}
+    </section>
+{% endblock main %}

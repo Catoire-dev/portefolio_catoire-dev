@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Acceuil{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        <link rel="stylesheet" href="/styles/base.css">
+        <link rel="stylesheet" href="/styles/header.css">
+        
+        {% block css %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </head>
+    <body>
+
+        <header class="border-red">
+            {% block header %}
+                <section class="header-box">
+                    <svg class="header-box" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#bababa}</style><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                    <a href="{{ path('app_home') }}"><h1>Catoire-dev</h1></a>
+                </section>
+                <section id="header-link-box">
+                    <a href="{{ path('app_about') }}">A Propos</a>
+                    <a href="{{ path('app_project')}}">Projets</a>
+                    <a href="">Contact</a>{#{{ path('app_contact')}}#}
+                </section>
+            {% endblock header %}
+        </header>
+
+
+        <main>
+            {% block main %}{% endblock main %}
+        </main>
+    </body>
+</html>

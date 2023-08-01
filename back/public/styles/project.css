@@ -1,0 +1,73 @@
+#project-main {
+    margin-top: 25px;
+}
+
+#project-main > h1 {
+    border: solid 5px #a02b2b;
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+#project-list {
+    margin-top: 45px;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.project {
+    box-shadow: 0px 0px 7px 1px rgba(255, 255, 255, 0.89);
+    -webkit-box-shadow: 0px 0px 7px 1px rgba(255, 255, 255, 0.89);
+    -moz-box-shadow: 0px 0px 7px 1px rgba(255, 255, 255, 0.89);
+    border-radius: 10px;
+    width: 250px;
+    padding: 10px;
+
+    gap: 10px;
+}
+
+.project:hover {
+    box-shadow: 0px 0px 7px 1px #a02b2b;
+    -webkit-box-shadow: 0px 0px 7px 1px #a02b2b;
+    -moz-box-shadow: 0px 0px 7px 1px #a02b2b;
+}
+
+.project > img {
+    width: 200px;
+}
+
+/* ------------------------------------------------------------------------------------------- */
+/*                                        Details                                              */
+/* ------------------------------------------------------------------------------------------- */
+
+#project-details {
+    margin-top: 0;
+
+    gap: 20px;
+}
+
+#title-box {
+    margin-top: 0;
+    padding: 5px 10px;
+}
+
+#project-content {
+
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#project-content > img  {
+    width: 700px;
+}
+
+#project-content > p {
+    padding: 0 50px;
+    line-height: 2em;
+    letter-spacing: 1px;
+}
