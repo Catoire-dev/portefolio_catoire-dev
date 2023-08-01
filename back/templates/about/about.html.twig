@@ -8,19 +8,23 @@
     <section id="about" class="box">
         <h1 class="border-red">A propos de moi</h1>
         <section id="bio" class="border-red">
-            
+            <p>salut c'est moi je suis un vrais dev fullstack de qualité aliexpress +++</p>
         </section>
 
 
         <section id="cv">
             
             <section id="xp-pro" class="border-red">
-                
+                {% for xp in xpPro %}
+                    <h1>{{xp.title}}</h1>
+                {% endfor %}
             </section>
                 
     
             <section id="studies" class="border-red">
-                
+                {% for s in studies %}
+                    <h1>{{s.certificate}}</h1>
+                {% endfor %}
             </section>
         </section>
 
@@ -28,7 +32,9 @@
 
 
         <section id="hobbies" class="border-red">
-
+            {% for h in hobbies %}
+                {{h.name}}
+            {% endfor %}
         </section>
     </section>
 {% endblock %}

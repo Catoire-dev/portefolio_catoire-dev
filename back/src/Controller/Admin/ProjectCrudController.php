@@ -30,7 +30,6 @@ class ProjectCrudController extends AbstractCrudController
                 ->hideOnIndex(),
             ImageField::new('img')
             ->setRequired($pageName === Crud::PAGE_NEW)
-
                 ->setBasePath('assets/image')
                 ->setUploadDir('/public/assets/image')
                 ->hideOnIndex(),
@@ -38,7 +37,7 @@ class ProjectCrudController extends AbstractCrudController
                 ->setRequired($pageName === Crud::PAGE_NEW)
                 ->setBasePath('assets/image')
                 ->setUploadDir('/public/assets/image'),
-                UrlField::new('link')
+            UrlField::new('link')
                 ->hideOnIndex(),
         ];
     }
