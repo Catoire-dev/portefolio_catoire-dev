@@ -13,11 +13,14 @@
                 
                 <div class="project box">
                     <h2>{{p.name}}</h2>
-                    <p>{{p.short}}</p>
+                    <p>{{p.short|striptags("<h1>, <ul> ,<ol>, <li> <strong>, <em>,  <a>, <del>, <div>, <pre>, <blockquote>")|raw}}</p>
                     <a href="{{path('app_project_details', {id:p.id})}}">
-                        <img src="{{p.thumbnail}}" alt="Miniature du project : {{p.name}}">
+                    <img  src="{{p.thumbnail starts with 'http' ? 
+                        asset(p.thumbnail) :
+                        asset('assets/image/' ~ p.thumbnail) 
+                    }}" alt="Miniature du project : {{p.name}}">
                     </a>
-                    </div>
+                </div>
                 {% endfor %}
             </section>
         {% endblock content %}

@@ -34,7 +34,7 @@
     -moz-box-shadow: 0px 0px 7px 1px #a02b2b;
 }
 
-.project > img {
+.project > a > img {
     width: 200px;
 }
 

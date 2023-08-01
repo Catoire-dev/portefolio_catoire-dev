@@ -39,7 +39,7 @@ class SetupController extends AbstractController {
             $tab[] = $new;
         }
         return $this->render('setup/setup.html.twig', [
-            'tab' => $tab()
+            'tab' => $tab
         ]);
     }
 }

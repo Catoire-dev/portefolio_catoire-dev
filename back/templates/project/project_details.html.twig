@@ -10,9 +10,12 @@
             <h1>{{p.name}}</h1>
             <p class="date">{{p.date|date("m/Y") }}</p>
         </div>
-        <div id="project-content">    
-            <img class="border-red" src="{{p.img}}" alt="Visuel du projet {{p.name}}">
-            <p>{{p.description}}</p>
+        <div id="project-content"> 
+            <img src="{{p.img starts with 'http' ? 
+                asset(p.img) :
+                asset('assets/image/' ~ p.img)}}"
+                class="border-red" alt="Visuel du projet {{p.name}}">
+            <p>{{p.description|striptags("<strong>, <em>, <del>, <a>, <div>")|raw}}</p>
         </div>
         <a href="{{p.link}}" target="_blank">Voir le projet en live</a>
         
