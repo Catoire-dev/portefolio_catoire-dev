@@ -1,7 +1,20 @@
 {% extends "base.html.twig" %}
 
+{% block css %}<link rel="stylesheet" href="styles/setup.css">{% endblock css %}
+
 {% block main %}
-    {% for t in tab %}
-        {{dump(t)}}
-    {% endfor %}
+    <section id="setup-link" class="box">
+        {% if tab %}
+            <a class="border-red" href="{{path('app_setup')}}">Back to setup</a>
+            {% for t in tab %}
+                {{dump(t)}}
+            {% endfor %}
+        {% else %}
+                <a class="border-red" href="{{path('app_setup_user')}}">Add user</a>
+                <a class="border-red" href="{{path('app_setup_project')}}">Add project</a>
+                <a class="border-red" href="{{path('app_setup_xppro')}}">add xp-pro</a>
+                <a class="border-red" href="{{path('app_setup_studies')}}">add Studies</a>
+                <a class="border-red" href="{{path('app_setup_hobbies')}}">add hobbies</a>
+        {% endif %}
+    </section>
 {% endblock main %}

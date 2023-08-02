@@ -1,0 +1,8 @@
+#setup-link {
+    gap: 20px;
+    flex-direction: row;
+}
+
+#setup-link > a {
+    padding: 8px;
+}
