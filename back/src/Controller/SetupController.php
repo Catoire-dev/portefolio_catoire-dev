@@ -41,6 +41,7 @@ class SetupController extends AbstractController {
             ->setCreateAt(new DateTimeImmutable())
             ->setIsVerified(false)
             ->setRoles(['ROLE_USER'])
+            ->setBio($this->faker->realTextBetween(500, 700, 2))
             ->setPassword($butcher->hashPassword($new, '123456'));
             
             $emi->persist($new);

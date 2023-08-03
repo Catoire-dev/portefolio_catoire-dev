@@ -8,9 +8,8 @@
 }
 
 #bio {
-    
     width: 90%;
-    height: 200px;
+    padding: 15px;
 }
 
 #cv {
@@ -22,20 +21,38 @@
     gap: 15px;
 }
 
-#xp-pro {
+.section-cv {
     /* background-color: #000000; */
-    width: 49%;
-    height: 400px;
+    width: 47%;
+    padding: 10px;
+
+    align-items: baseline;
+    gap: 20px;
+}
+
+.card-cv {
+    width: 100%;
+    margin-top: 0;
+    padding: 10px;
+
+    align-items: baseline;
+    gap: 5px;
+    
+}
+
+#xp-pro {
+
 }
 
 #studies {
-    /* background-color: #000000; */
-    width: 49%;
-    height: 400px;
+
 }
 
 #hobbies {
-    
     width: 90%;
-    height: 200px;
+    padding: 10px;
+
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 15px;
 }

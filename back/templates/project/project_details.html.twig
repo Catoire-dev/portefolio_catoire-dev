@@ -15,7 +15,7 @@
                 asset(p.img) :
                 asset('assets/image/' ~ p.img)}}"
                 class="border-red" alt="Visuel du projet {{p.name}}">
-            <p>{{p.description|striptags("<strong>, <em>, <del>, <a>, <div>")|raw}}</p>
+            <p>{{p.description|striptags("<h1>, <ul> ,<ol>, <li> <strong>, <em>,  <a>, <del>, <div>, <pre>, <blockquote>")|raw}}</p>
         </div>
         <a href="{{p.link}}" target="_blank">Voir le projet en live</a>
         

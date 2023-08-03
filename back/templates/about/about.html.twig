@@ -8,32 +8,37 @@
     <section id="about" class="box">
         <h1 class="border-red">A propos de moi</h1>
         <section id="bio" class="border-red">
-            <p>salut c'est moi je suis un vrais dev fullstack de qualité aliexpress +++</p>
+            <p>{{bio|striptags("<h1>, <ul> ,<ol>, <li> <strong>, <em>,  <a>, <del>, <div>, <pre>, <blockquote>")|raw}}</p>
         </section>
-
-
         <section id="cv">
             
-            <section id="xp-pro" class="border-red">
+            <section id="xp-pro" class="box section-cv">
                 {% for xp in xpPro %}
-                    <h1>{{xp.title}}</h1>
+                    <div class="border-red box card-cv">
+                        <h2>{{xp.title}}</h1>
+                        <i>{{xp.compagny}} - {{xp.city}}</i>
+                        <p>{{xp.description|striptags("<h1>, <ul> ,<ol>, <li> <strong>, <em>,  <a>, <del>, <div>, <pre>, <blockquote>")|raw}}</p>
+                    </div>
                 {% endfor %}
             </section>
-                
     
-            <section id="studies" class="border-red">
+            <section id="studies" class="box section-cv">
                 {% for s in studies %}
-                    <h1>{{s.certificate}}</h1>
+                    <div class="border-red box card-cv">
+                        <h2>{{s.certificate}}</h2>
+                        <i>{{s.school}}</i>
+                        <p>{{s.description|striptags("<h1>, <ul> ,<ol>, <li> <strong>, <em>,  <a>, <del>, <div>, <pre>, <blockquote>")|raw}}</p>
+                    </div>
                 {% endfor %}
             </section>
         </section>
 
-
-
-
-        <section id="hobbies" class="border-red">
+        <section id="hobbies" class="border-red box">
             {% for h in hobbies %}
-                {{h.name}}
+                <div>
+                    <h2>{{h.name}}</h2>
+                    <p>{{h.description|striptags("<h1>, <ul> ,<ol>, <li> <strong>, <em>,  <a>, <del>, <div>, <pre>, <blockquote>")|raw}}</p>
+                </div>
             {% endfor %}
         </section>
     </section>
