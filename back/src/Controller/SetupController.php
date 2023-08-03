@@ -19,11 +19,12 @@ use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class SetupController extends AbstractController {
     private $faker;
-
+    
     public function __construct() {
         $this->faker = Factory::create();
     }
     #[Route('/setup', name: 'app_setup')]
+    #[IsGranted('ROLE_ADMIN')]
     public function setup(): Response {
         
         return $this->render('setup/setup.html.twig', [
@@ -56,7 +57,6 @@ class SetupController extends AbstractController {
     }
 
     #[Route('/setup/project', name: 'app_setup_project')]
-    #[IsGranted('ROLE_ADMIN')]
     public function setup_project(EntityManagerInterface $emi): Response {
 
         for ($i=0; $i < 8; $i++) { 
