@@ -14,24 +14,32 @@ To run this project, you will need to add the following environment variables to
 
 ## Run Locally
 
-Create an Empty database and set the env variable with its adress.
 
 Clone the project
 
 ```bash
-  git clone https://github.com/Catoire-dev/portefolio_catoire-dev/tree/main/back
+  git clone https://github.com/Catoire-dev/portefolio_catoire-dev.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd back
+  cd portefolio_catoire-dev/back/
 ```
 
 Install dependencies
 
 ```bash
   composer install
+```
+
+Duplicate `.env` and rename it to `.env.local`. Modify database url variable from `.env.local`.
+Create an Empty database and set the env variable with its adress.
+
+Setup Doctrine
+```bash
+php bin/console make:migration
+php bin/console doctrine:make:migration
 ```
 
 Start the server
@@ -49,9 +57,7 @@ You can administrate the Portfolio via this url :
 You have to be connected with an admin user.
 
 ### Create first User/s
-You have to create the first user in your database mannager.
-Set his role to `ROLE_ADMIN`.
-After create you can securise the password by modify the password in panel admin, with this way the password will be hashed.
+If the table User is empty, you can access to the URL `/first_user`, here you can create the first user. His role will be `ROLE_ADMIN'
 
 ### Setup
 Access only by `ROLE_ADMIN`.
