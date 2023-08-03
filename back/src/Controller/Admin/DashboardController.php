@@ -7,6 +7,7 @@ use App\Entity\Project;
 use App\Entity\Studies;
 use App\Entity\User;
 use App\Entity\XpPro;
+use App\Repository\UserRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;

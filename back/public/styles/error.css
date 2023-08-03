@@ -3,3 +3,15 @@
 
     gap: 20px;
 }
+
+pre {
+    line-height: 0.5;
+}
+
+#info {
+    gap: 30px;
+}
+
+h3 {
+    font-style: italic;
+}
