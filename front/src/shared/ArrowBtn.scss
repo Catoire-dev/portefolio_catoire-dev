@@ -1,0 +1,24 @@
+@mixin arrow-btn {
+    width: 150px;
+    height: 69px;
+
+    gap: 10px;
+    img {
+        width: 45.94px;
+        height: 14.64px;
+    }
+}
+
+.arrow-btn-down {
+    @include arrow-btn();
+    position: absolute;
+    bottom: 0;
+}
+
+.arrow-btn-up {
+    @include arrow-btn();
+    flex-direction: column-reverse;
+    img {
+        transform: rotate(180deg);
+    }
+}

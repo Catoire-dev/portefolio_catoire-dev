@@ -1,0 +1,18 @@
+main {
+    #description {
+        width: 225px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    #bubble-box {
+        margin-top: 90px;
+        gap: 10px;
+        .bubble {
+            border: solid black 3px;
+            border-radius: 42px;
+
+            padding: 5px 15px;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@import '../assets/styles/variable.scss';
+
+header {
+    border: solid 2px $red;
+    border-radius: 24px;
+
+
+    width: 288px;
+    margin-top: 20px;
+    padding: 10px;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    #header-box {
+
+    }
+
+    #header-link-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 10px;
+    }
+}
+
