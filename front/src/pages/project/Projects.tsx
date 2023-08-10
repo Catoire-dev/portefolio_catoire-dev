@@ -1,15 +1,18 @@
-import { ArrowBtn } from "../../shared/ArrowBtn"
-import { Header } from "../../shared/Header"
+import './Projects.scss';
+
+import { ProjectsCard } from './ProjectCard/ProjectCard';
 
 export const Projects = () => {
     return (
-        <>
-            <ArrowBtn textBtn="Qui suis-je" bottomBtn={false} path="/about" />
-            <Header />
-            <main>
-
-            </main>
-            <ArrowBtn textBtn="Mon parcours" bottomBtn={false} path="/about" />
-        </>
+        <main>
+            <section className='box border-red title-box'>
+                <h1>Mes Projets</h1>
+            </section>
+            <section id="project-list">
+                <ProjectsCard />
+                <ProjectsCard />
+                <ProjectsCard />
+            </section>
+        </main>
     )
 }

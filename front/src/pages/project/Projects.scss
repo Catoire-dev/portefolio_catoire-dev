@@ -1,0 +1,94 @@
+@import '../../assets/styles/mixins.scss';
+@import '../../assets/styles/variable.scss';
+
+#project-main {
+    margin-top: 25px;
+
+    h1 {
+        border: solid 5px #a02b2b;
+        border-radius: 10px;
+        padding: 10px 15px;
+    }
+    
+}
+
+#project-list {
+    // margin-top: 45px;
+
+    width: 350px;
+
+    @include flex-col;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.project {
+    border: solid black 7px;
+    border-radius: 42px;
+
+    width: 340px;
+    padding: 20px 0;
+
+    gap: 10px;
+
+    .project-title {
+        width: 280px;
+
+        @include flex-row;
+        justify-content: space-between;
+    }
+
+    i {
+        margin-left: 30px;
+        color: $red;
+        align-self: baseline;
+    }
+    .project-content {
+        width: 280px;
+
+        @include flex-col;
+        gap: 10px;
+        img {
+            width: 280px;
+            height: 156px;
+        }
+    }
+}
+
+.project:hover {
+    border: #a02b2b solid 7px;
+}
+
+/* ------------------------------------------------------------------------------------------- */
+/*                                        Details                                              */
+/* ------------------------------------------------------------------------------------------- */
+
+#project-details {
+    margin-top: 0;
+
+    gap: 20px;
+}
+
+#title-box {
+    margin-top: 0;
+    padding: 5px 10px;
+}
+
+#project-content {
+
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    img  {
+        width: 700px;
+    }
+
+    p {
+        padding: 0 50px;
+        line-height: 2em;
+        letter-spacing: 1px;
+    }
+}
