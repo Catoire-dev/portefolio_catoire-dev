@@ -1,8 +1,12 @@
 @mixin arrow-btn {
-    width: 150px;
+    // width: 150px;
     height: 69px;
 
     gap: 10px;
+    p {
+        text-align: center;
+    }
+
     img {
         width: 45.94px;
         height: 14.64px;
@@ -11,8 +15,6 @@
 
 .arrow-btn-down {
     @include arrow-btn();
-    position: absolute;
-    bottom: 0;
 }
 
 .arrow-btn-up {

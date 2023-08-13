@@ -11,7 +11,7 @@ export const Projects = () => {
             <section id="project-list">
                 <ProjectsCard />
                 <ProjectsCard />
-                <ProjectsCard />
+                {/* <ProjectsCard /> */}
             </section>
         </main>
     )

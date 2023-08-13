@@ -42,8 +42,17 @@ a{
     font-size: 0.7em;
 }
 
+html, body, #root {
+    height: 100%;
+}
+
 body, #root {
     @include flex-col;
+}
+
+#root {
+    justify-content: space-between;
+    gap: 20px;
 }
 
 main {

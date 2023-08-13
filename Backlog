@@ -5,6 +5,8 @@
     -btn du bas a fixer en bas du document et non de l'ecran
 -design :
     -Placer les bulles acceuil
+    -sur les page scrolable:
+        -width differente du a laffichage de la scrollbar qui cree donc un sautement
 -Animation :
     -Bulle acceuil
     -scroll slide effet sur le changement de page

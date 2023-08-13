@@ -24,7 +24,7 @@ const homeInfo = {
     path : import.meta.env.VITE_STUDIES_PATH
   }
   const careerInfo = {
-    text : "Mes experiences professionnelles",
+    text : "Mon parcours Professionnel",
     path : import.meta.env.VITE_CAREER_PATH
   }
   const contactInfo = {

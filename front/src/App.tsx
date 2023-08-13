@@ -21,18 +21,20 @@ function App() {
 
   return (
     <>
-      {
-        routesInfo[location].prevText && <ArrowBtn textBtn={routesInfo[location].prevText } bottomBtn={false} path={routesInfo[location].prevPath} />
-      }
-      <Header />
-      <Routes>
-        <Route path={import.meta.env.VITE_HOME_PATH} element={<Home />} />
-        <Route path={import.meta.env.VITE_ABOUT_PATH} element={<About />} />
-        <Route path={import.meta.env.VITE_PROJECTS_PATH} element={<Projects />} />
-        <Route path={import.meta.env.VITE_STUDIES_PATH} element={<Studies />} />
-        <Route path={import.meta.env.VITE_CAREER_PATH} element={<Career />} />
-        <Route path={import.meta.env.VITE_CONTACT_PATH} element={<Contact />} />
-      </Routes>
+      <div id='mdr' className='box'>
+        {
+          routesInfo[location].prevText && <ArrowBtn textBtn={routesInfo[location].prevText } bottomBtn={false} path={routesInfo[location].prevPath} />
+        }
+        <Header />
+        <Routes>
+          <Route path={import.meta.env.VITE_HOME_PATH} element={<Home />} />
+          <Route path={import.meta.env.VITE_ABOUT_PATH} element={<About />} />
+          <Route path={import.meta.env.VITE_PROJECTS_PATH} element={<Projects />} />
+          <Route path={import.meta.env.VITE_STUDIES_PATH} element={<Studies />} />
+          <Route path={import.meta.env.VITE_CAREER_PATH} element={<Career />} />
+          <Route path={import.meta.env.VITE_CONTACT_PATH} element={<Contact />} />
+        </Routes>
+      </div>
       {
         routesInfo[location].nextText && <ArrowBtn textBtn={routesInfo[location].nextText } bottomBtn={true} path={routesInfo[location].nextPath} />
       }
