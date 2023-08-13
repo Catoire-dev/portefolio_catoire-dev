@@ -6,3 +6,11 @@
 #home > h2 {
     font-size: 1.5em;
 }
+
+#disclaimer {
+    gap: 10px;
+}
+
+#disclaimer > p {
+    text-align: center;
+}
