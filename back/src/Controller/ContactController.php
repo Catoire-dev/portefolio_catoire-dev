@@ -23,8 +23,8 @@ class ContactController extends AbstractController
                 $data['email'], 
                 $data['subject'],
                 $data['message'],
-                $data['message']);
-                
+                $data['message']
+            );     
             $this->addFlash('success', 'Votre message a été envoyé');
             return $this->redirectToRoute('app_home');
         }

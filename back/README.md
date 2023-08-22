@@ -1,4 +1,3 @@
-
 # Back section
 
 This folder contain the back end for my portfolio.
@@ -89,8 +88,44 @@ Here you can create, modify and delete all section of the Portfolio :
     - Hobbies
 
 
+### API Reference
+This project contain a very simple read only API.
+
+The `API_KEY` is store in your file `.env.local`,
+It must be past to the header with the key `API_KEY`.
+
+`/api` endpoint return a html page with this documentation.
+
+#### items
+  - projects
+  - xpPros
+  - Studies
+  - about 
+
+`About` is the only who don't have a `id` endpoint for obsious reason.
+#### Get all items
+
+```http
+  GET /api/items
+```
+
+| Parameter | Type     | Description                | URI/Header  |
+| :-------- | :------- | :------------------------- | :---------- |
+| `api_key` | `string` | **Required**. Your API key | Header      |
+
+#### Get one item
+
+```http
+  GET /api/items/{id}
+```
+
+| Parameter | Type      | Description                        | URI/Header |
+| :-------- | :-------  | :--------------------------------  |:---------- |
+| `api_key` | `string`  | **Required**. Your API key         | Header     |
+| `id`      | `integer` | **Required**. Id of item to fetch  | URI        |
+
+
 
 ## Authors
 
 - [@Catoire-dev](https://www.github.com/catoire-dev)
-

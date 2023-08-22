@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{app_name}} - API</title>
+    </head>
+    <body>
+        <h3>API Reference</h3>
+
+        <p>This project contain a very simple read only API.</p>
+
+        <p>
+            The <span style="color: #e83e3e">API_KEY</span> is store in your file <span style="color: #e83e3e">.env.local</span>,
+            It must be past to the header with the key <span style="color: #e83e3e">API_KEY</span>.
+        </p>
+
+        <h4>items</h4>
+
+        <ul>
+            <li>projects</li>
+            <li>xpPros</li>
+            <li>Studies</li>
+            <li>about</li>
+        </ul>
+
+        <p><span style="color: #e83e3e">About</span> is the only who don't have a <span style="color: #e83e3e">{id}</span> endpoint for obsious reason.</p>
+
+        <h4>Get all items : <span style="color: #e83e3e">GET</span> /api/items</h4>
+        <table border="3px" cellpadding="7px">
+            <thead bgcolor="#BCBCBC">
+                <tr>
+                <th align="left">Parameter</th>
+                <th align="left">Type</th>
+                <th align="left">Description</th>
+                <th align="left">URI/Header</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td align="left">api_key</td>
+                    <td align="left"><span style="color: #00ab14">string</span></td>
+                    <td align="left"><strong>Required</strong>. Your API key</td>
+                    <td align="left">Header</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4>Get one item <span style="color: #e83e3e">GET</span> /api/items/{id}</h4>
+        
+        <table  border="3px" cellpadding="7px">
+            <thead bgcolor="#BCBCBC">
+                <tr>
+                    <th align="left">Parameter</th>
+                    <th align="left">Type</th>
+                    <th align="left">Description</th>
+                    <th align="left">URI/Header</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td align="left">api_key</td>
+                    <td align="left"><span style="color: #00ab14">string</span></td>
+                    <td align="left"><strong>Required</strong>. Your API key</td>
+                    <td align="left">Header</td>
+                </tr>
+                <tr>
+                    <td align="left">id</td>
+                    <td align="left"><span style="color: #00ab14">integer</span></td>
+                    <td align="left"><strong>Required</strong>. Id of item to fetch</td>
+                    <td align="left">URI</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        
+    </body>
+</html>
