@@ -1,6 +1,6 @@
 ---------------front--------------
--Recuperer data via API
 -design :
+    -design desktop
     -Placer les bulles acceuil
     -sur les page scrolable:
         -width differente du a laffichage de la scrollbar qui cree donc un sautement
@@ -8,6 +8,7 @@
     -Bulle acceuil
     -scroll slide effet sur le changement de page
 
+-Formulaire de contact
+-Recuperer data via API
 
 ---------------Back----------------
--Api a faire

@@ -60,7 +60,7 @@ class ApiController extends AbstractController
         return $this->error_401();
     }
 
-    #[Route('/api/Projects/{id}', name: 'api_studie', methods: ['GET'])]
+    #[Route('/api/projects/{id}', name: 'api_studie', methods: ['GET'])]
     public function Api_project(int $id, Request $r, ProjectRepository $pr, SerializerInterface $serializer): Response {
         if (($r->headers->get('API_KEY') == $this->getParameter('API_KEY')) && $id >= 1) {
             if ($data = $pr->find($id))
