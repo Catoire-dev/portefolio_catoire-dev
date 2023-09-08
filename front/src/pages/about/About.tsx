@@ -1,14 +1,10 @@
 import { useEffect, useState } from 'react';
-import { getApiData } from '../../utils/getApiData';
+import { getApiData } from '../../api/getApiData';
 import './About.scss'
 
 export const About = () => {
     const about_uri = import.meta.env.VITE_API_ABOUT_URI;
     const [bio, setBio] = useState<string>('No bio Here.');
-
-    useEffect(() => {
-        getAbout();
-    }, [bio])
 
     const getAbout = async () => {
         const data = await getApiData(about_uri);
@@ -18,18 +14,20 @@ export const About = () => {
         else
         console.log("Error getAbout");
     }
-    console.log(bio);
+
+    useEffect(() => {
+        getAbout();
+    }, [bio])
 
     return (
-        <>
-            <main>
-                <section className='box border-red title-box'>
-                    <h1>Qui suis-je?</h1>
-                </section>
-                <p id='about-description'>
-                    {/* {bio} */}
-                </p>
-            </main>
-        </>
+        <main>
+            <section className='box border-red title-box'>
+                <h1>Qui suis-je?</h1>
+            </section>
+            <p id='about-description' 
+                dangerouslySetInnerHTML={{ __html: bio }}>
+            </p>
+        </main>
     )
 }
+

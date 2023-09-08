@@ -17,7 +17,7 @@ class Project
     #[ORM\Column(length: 255)]
     private ?string $name = null;
 
-    #[ORM\Column(type: Types::DATE_MUTABLE)]
+    #[ORM\Column(type: Types::DATE_MUTABLE, nullable: true)]
     private ?\DateTimeInterface $Date = null;
 
     #[ORM\Column(type: Types::TEXT)]
@@ -26,10 +26,10 @@ class Project
     #[ORM\Column(length: 255)]
     private ?string $short = null;
     
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, nullable: true)]
     private ?string $img = null;
   
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, nullable: true)]
     private ?string $thumbnail = null;
 
     #[ORM\Column(length: 255)]

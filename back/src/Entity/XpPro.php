@@ -18,7 +18,7 @@ class XpPro
     private ?string $title = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    private ?string $compagny = null;
+    private ?string $company = null;
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $city = null;
@@ -49,14 +49,14 @@ class XpPro
         return $this;
     }
 
-    public function getCompagny(): ?string
+    public function getCompany(): ?string
     {
-        return $this->compagny;
+        return $this->company;
     }
 
-    public function setCompagny(?string $compagny): static
+    public function setCompany(?string $company): static
     {
-        $this->compagny = $compagny;
+        $this->company = $company;
 
         return $this;
     }

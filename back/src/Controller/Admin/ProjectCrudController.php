@@ -29,12 +29,12 @@ class ProjectCrudController extends AbstractCrudController
             TextEditorField::new('short')
                 ->hideOnIndex(),
             ImageField::new('img')
-            ->setRequired($pageName === Crud::PAGE_NEW)
+            // ->setRequired($pageName === Crud::PAGE_NEW)
                 ->setBasePath('assets/image')
                 ->setUploadDir('/public/assets/image')
                 ->hideOnIndex(),
             ImageField::new('thumbnail')
-                ->setRequired($pageName === Crud::PAGE_NEW)
+                // ->setRequired($pageName === Crud::PAGE_NEW)
                 ->setBasePath('assets/image')
                 ->setUploadDir('/public/assets/image'),
             UrlField::new('link')
