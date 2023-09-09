@@ -1,6 +1,8 @@
+import './About.scss'
+
 import { useEffect, useState } from 'react';
 import { getApiData } from '../../api/getApiData';
-import './About.scss'
+
 
 export const About = () => {
     const about_uri = import.meta.env.VITE_API_ABOUT_URI;
@@ -12,12 +14,10 @@ export const About = () => {
         if (data)
             setBio(data);
         else
-        console.log("Error getAbout");
+            console.log("Error getAbout");
     }
 
-    useEffect(() => {
-        getAbout();
-    }, [bio])
+    useEffect(() => {getAbout()}, [bio])
 
     return (
         <main>

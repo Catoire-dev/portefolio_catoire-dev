@@ -9,12 +9,10 @@ export const getApiData = async (dataName: string) => {
         }
     };
     try {
-        console.log("url", base_url + dataName)
+        // console.log("url", base_url + dataName)
         const { data } = await axios.get(base_url + dataName, config);
         return data;
     } catch (e: any) {
         throw new Error('ApiData :' + e.message);
-    };
-
-    
+    };    
 }

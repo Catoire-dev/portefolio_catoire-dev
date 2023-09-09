@@ -2,6 +2,7 @@
 -design :
     -design desktop
     -Placer les bulles acceuil
+    -selection navbar
     -sur les page scrolable:
         -width differente du a laffichage de la scrollbar qui cree donc un sautement
 -Animation :

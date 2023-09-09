@@ -74,6 +74,7 @@ const homeInfo = {
       path: careerInfo.path,
       nextPath: contactInfo.path,
     },
+    
     [contactInfo.path] : {
       prevText: careerInfo.text,
       text: contactInfo.text,

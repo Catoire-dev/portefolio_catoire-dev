@@ -1,18 +1,35 @@
+import { Link } from 'react-router-dom';
+import { IProject } from '../../../interface/IProject'
+import { placeHolderImg } from '../../../utils/utils';
 import '../Projects.scss'
 
-export const ProjectsCard = () => {
-    
+
+type ProjectCardProps = {
+    project: IProject; 
+}
+
+export const ProjectsCard = ({project}: ProjectCardProps) => {
+    // console.log(project.id);
+    const thumbPath = "/public/projects-img/";
+    if (thumbPath + project.thumbnail) {
+        console.log(thumbPath + project.thumbnail);
+    } 
+
+    // /src/assets/placeholder-thumb.png
+
     return (
         <div className="project box">
             <div className='project-title'>
-                <h2>Project Name</h2>
-                <p>06/2033</p>
+                <h2>{project.name}</h2>
+                <p>09/1992</p>
             </div>
-            <i>client</i>
+            <i>Qui</i>
             <div className='project-content'>
-                <img src="https://picsum.photos/300" alt="Miniature du project : name" />
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quam ipsa, ad reprehenderit sunt nemo ipsam repellat explicabo, recusandae modi dolor molestiae voluptate minima ducimus, dignissimos veritatis mollitia debitis fugit.</p>
-                {/* <a href="/project/id"></a> */}
+                <Link to={`/projects/${project.id}`}>
+                    <img src={thumbPath + project.thumbnail} onError={placeHolderImg} alt={"Miniature du project : " + project.name } />
+                </Link>
+                <p dangerouslySetInnerHTML={{__html: project.short}}></p>
+
             </div>
         </div>
     )

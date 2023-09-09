@@ -54,13 +54,20 @@
         img {
             width: 280px;
             height: 156px;
+            border-radius: 7px;
+        }
+
+        img:hover {
+            width: 300px;
+            height: 167px;
         }
     }
+
 }
 
-.project:hover {
-    border: #a02b2b solid 7px;
-}
+// .project:hover {
+//     border: #a02b2b solid 7px;
+// }
 
 /* ------------------------------------------------------------------------------------------- */
 /*                                        Details                                              */
