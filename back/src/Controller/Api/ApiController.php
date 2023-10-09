@@ -2,16 +2,17 @@
 
 namespace App\Controller\Api;
 
-use App\Repository\ProjectRepository;
-use App\Repository\StudiesRepository;
 use App\Repository\UserRepository;
 use App\Repository\XpProRepository;
+use App\Repository\ProjectRepository;
+use App\Repository\StudiesRepository;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 use Symfony\Component\Serializer\SerializerInterface;
+use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;
+use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class ApiController extends AbstractController
 {
@@ -52,11 +53,13 @@ class ApiController extends AbstractController
     // Projects -----------------
     #[Route('/api/projects', name: 'app_api_projects', methods: ['GET'])]
     public function Api_projects(Request $r, ProjectRepository $pr, NormalizerInterface $ni): Response {
-        if ($r->headers->get('API_KEY') == $this->getParameter('API_KEY')){
-            if ($data = $pr->findAll())
-                return $this->json($data, 200);
+        // if ($r->headers->get('API_KEY') == $this->getParameter('API_KEY')){
+            if ($data = $pr->findAll()){
+                // dd($this->json($data, 200, [], [DateTimeNormalizer::FORMAT_KEY => 'Y-m']));
+                // dd($data);
+                return $this->json($data, 200);}
             return $this->error_404();
-        } 
+        // }
         return $this->error_401();
     }
 

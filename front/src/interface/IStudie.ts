@@ -2,8 +2,8 @@ export interface IStudie {
     id : number;
     certificate : string;
     school : string;
-    inProgress : boolean;
     city : string;
-    date : Date;
+    period : string;
     description : string;
+    inProgress : boolean;
 }

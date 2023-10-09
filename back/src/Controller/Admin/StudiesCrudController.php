@@ -23,8 +23,7 @@ class StudiesCrudController extends AbstractCrudController
             IdField::new('id')
                 ->hideOnForm(),
             TextField::new('certificate'),
-            TextField::new('city')
-                ->hideOnIndex(),
+            TextField::new('city'),
             TextField::new('school'),
             TextEditorField::new('description')
                 ->hideOnIndex(),

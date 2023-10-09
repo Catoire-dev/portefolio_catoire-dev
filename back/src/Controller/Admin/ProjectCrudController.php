@@ -10,6 +10,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
 
 class ProjectCrudController extends AbstractCrudController
 {
@@ -24,6 +25,8 @@ class ProjectCrudController extends AbstractCrudController
             IdField::new('id')
                 ->hideOnForm(),
             TextField::new('name'),
+            TextField::new('company'),
+            TextField::new('period'),
             TextEditorField::new('description')
                 ->hideOnIndex(),
             TextEditorField::new('short')

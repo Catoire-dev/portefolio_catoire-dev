@@ -1,23 +1,25 @@
 import './About.scss'
 
 import { useEffect, useState } from 'react';
-import { getApiData } from '../../api/getApiData';
+// import { getApiData } from '../../api/getApiData';
 
+import bio from '../../data/about.json';
 
 export const About = () => {
-    const about_uri = import.meta.env.VITE_API_ABOUT_URI;
-    const [bio, setBio] = useState<string>('No bio Here.');
 
-    const getAbout = async () => {
-        const data = await getApiData(about_uri);
+    // const about_uri = import.meta.env.VITE_API_ABOUT_URI;
+    // const [bio, setBio] = useState<string>('No bio Here.');
 
-        if (data)
-            setBio(data);
-        else
-            console.log("Error getAbout");
-    }
+    // const getAbout = async () => {
+    //     const data = await getApiData(about_uri);
 
-    useEffect(() => {getAbout()}, [bio])
+    //     if (data)
+    //         setBio(data);
+    //     else
+    //         console.log("Error getAbout");
+    // }
+
+    // useEffect(() => {getAbout()}, [bio])
 
     return (
         <main>
@@ -25,7 +27,7 @@ export const About = () => {
                 <h1>Qui suis-je?</h1>
             </section>
             <p id='about-description' 
-                dangerouslySetInnerHTML={{ __html: bio }}>
+                dangerouslySetInnerHTML={{ __html: bio.bio }}>
             </p>
         </main>
     )

@@ -10,10 +10,11 @@ type ProjectCardProps = {
 
 export const ProjectsCard = ({project}: ProjectCardProps) => {
     // console.log(project.id);
-    const thumbPath = "/public/projects-img/";
-    if (thumbPath + project.thumbnail) {
-        console.log(thumbPath + project.thumbnail);
-    } 
+    // const thumbPath = "/public/projects-img/";
+    const thumbPath = "/projects-img/";
+    // if (thumbPath + project.thumbnail) {
+    //     console.log(thumbPath + project.thumbnail);
+    // } 
 
     // /src/assets/placeholder-thumb.png
 
@@ -21,9 +22,9 @@ export const ProjectsCard = ({project}: ProjectCardProps) => {
         <div className="project box">
             <div className='project-title'>
                 <h2>{project.name}</h2>
-                <p>09/1992</p>
+                <p>{project.period}</p>
             </div>
-            <i>Qui</i>
+            <i>{project.customer}</i>
             <div className='project-content'>
                 <Link to={`/projects/${project.id}`}>
                     <img src={thumbPath + project.thumbnail} onError={placeHolderImg} alt={"Miniature du project : " + project.name } />

@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "Missions Intérimaires",
+        "company": "Side, Staffme, AXA Tech",
+        "city": "Ile de france",
+        "period": "2015 - 2021",
+        "inProgress": false,
+        "description": "<div>Installation informatique, manutention, gestion de stock, saisie de données, vente en boutique etc...</div>"
+    },
+    {
+        "id": 2,
+        "title": "Mécanicien motocycle",
+        "company": "Yamaha, Triumph/dafy",
+        "city": "Pantin, Saint maximin",
+        "period": "2021 - 2022",
+        "inProgress": false,
+        "description": "<div>Opérations d'entretien et de maintenance de véhicules à 2 roues motorisés, recherche de panne, customisation</div>"
+    }
+]

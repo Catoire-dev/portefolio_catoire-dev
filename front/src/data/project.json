@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Re-Act !",
+        "customer": "perso",
+        "period": "05/2023",
+        "description": "<div>Application listant des films depuis The Movie Database. Filtrage par popularité, period de sortie et genres. Ajout des films en favoris. Page de détails de chaque film avec review.</div><div><br></div><ul><li>Travail en groupe - méthode Agile</li><li>Liste dynamique de films</li><li>Page de détails et review</li><li>API The Movie Database</li><li>Système de favoris Local</li><li>Système de filtres par genres</li></ul>",
+        "short": "<div>A faire</div>",
+        "img": "re-act_full.png",
+        "thumbnail": "re-act_thumb.png",
+        "link": "https://github.com/thomasmiotto/Re-Act",
+        "company": "Konexio"
+    },
+    {
+        "id": 2,
+        "name": "le_sage_vieu",
+        "customer": "perso",
+        "period": "04/2023",
+        "description": "<div>Demander au vieux sage millénaire possédant le savoir du monde et plus encore de vous transmettre des proverbes ou citations.<br><br></div><ul><li>Sélection aléatoire parmi une liste</li><li>système de favoris Local</li><li>Ajout de nouveaux proverbes/citations</li></ul>",
+        "short": "<div>Ma sagesse, tu obtiendra.</div>",
+        "img": "le-sage-vieu_full.png",
+        "thumbnail": "le-sage-vieu_thumb.png",
+        "link": "https://github.com/Catoire-dev/le_sage_vieu",
+        "company": "Konexio"
+    },
+    {
+        "id": 3,
+        "name": "nomnomnom",
+        "customer": "perso",
+        "period": "05/2023",
+        "description": "<div>Application de liste de restaurant.<br><br></div><ul><li>Liste dynamique de restaurant</li><li>Page de détails</li><li>Système de favoris Local</li></ul>",
+        "short": "<div>Trouver les meilleures adresses afin de vous restaurer de manière optimale !</div>",
+        "img": "nomnomnom_full.png",
+        "thumbnail": "nomnomnom_thumb.png",
+        "link": "https://github.com/Catoire-dev/nomnomnom/tree/main",
+        "company": "Konexio"
+    }
+]

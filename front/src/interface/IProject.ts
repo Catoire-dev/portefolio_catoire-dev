@@ -1,7 +1,8 @@
 export interface IProject {
     id : number;
     name : string;
-    date : Date;
+    period : string;
+    customer: string,
     description : string;
     short : string;
     img : string;

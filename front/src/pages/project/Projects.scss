@@ -69,36 +69,3 @@
 //     border: #a02b2b solid 7px;
 // }
 
-/* ------------------------------------------------------------------------------------------- */
-/*                                        Details                                              */
-/* ------------------------------------------------------------------------------------------- */
-
-#project-details {
-    margin-top: 0;
-
-    gap: 20px;
-}
-
-#title-box {
-    margin-top: 0;
-    padding: 5px 10px;
-}
-
-#project-content {
-
-    padding: 20px;
-
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    img  {
-        width: 700px;
-    }
-
-    p {
-        padding: 0 50px;
-        line-height: 2em;
-        letter-spacing: 1px;
-    }
-}

@@ -29,23 +29,23 @@ export const ProjectDetails = () => {
     return (
         <>
             {proj && 
-                <main>
+                <main className='box'>
                     <Link id="back-btn" to={'/projects'}>Retour</Link>
-                    <section id='project-details'>
+                    <section className='border-black box' id='project-details'>
                         <section>
                             <section>
                                 <h2>{proj.name}</h2>
                                 <section>
-                                    <p>09/2001</p>
+                                    {/* <p>09/2001</p> */}
+                                    <p>{proj.date?.toLocaleDateString()}</p>
                                     <p>SuperCustomer</p>
-                                    {/* <p>{proj.date}</p> */}
                                     {/* <p>{proj.customer}</p> */}
                                 </section>
                             </section>
                             {proj && <div dangerouslySetInnerHTML={{__html:DOMPurify.sanitize(proj.description)}}></div>}
                         </section>
                         <section>
-                            <img src={imgPath + proj.img} onError={placeHolderImg} alt={"Miniature du project : " + proj.name } />
+                            <img id='cover' src={imgPath + proj.img} onError={placeHolderImg} alt={"Miniature du project : " + proj.name } />
                         </section>
                     </section>
 

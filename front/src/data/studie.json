@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "certificate": "Développeur web et web mobile",
+        "school": "Konexio",
+        "inProgress": true,
+        "city": "Paris",
+        "period": null,
+        "description": "<ul><li>Développement d’applications responsives et dynamiques avec Vanilla JS ou React</li><li>Développement d’applications Backend avec PHP Symphony</li><li>Conception de base de données avec MySQL</li><li>Gestion de projets en groupe, méthode agile (Miro, Trello, Scrum)</li></ul><div><br></div>"
+    },
+    {
+        "id": 2,
+        "certificate": "Baccalauréat Professionnel Maintenance des Véhicules - option C",
+        "school": "INCM",
+        "inProgress": false,
+        "city": "Le bourget",
+        "period": "2022",
+        "description": "<div>Maintenance, réparation, diagnostic de véhicules à 2 roues motorisés</div>"
+    },
+    {
+        "id": 3,
+        "certificate": "Cursus en programmation",
+        "school": "Epitech, Ecole 42, OpenClassroom",
+        "inProgress": false,
+        "city": "Paris",
+        "period": "2015 - 2017",
+        "description": "<div>Re-implantation de la Bibliothèque standard C, printf, ls, fonction de lecture de fichiers, programme algorithmique fillit. mini shop en ligne en PHP.</div>"
+    },
+    {
+        "id": 4,
+        "certificate": "Baccalauréat Professionnel SEN",
+        "school": "Lycée Jean Perrin",
+        "inProgress": false,
+        "city": "Saint-Ouen-L'Aumône",
+        "period": "2015",
+        "description": "<div>Baccalauréat Professionnel Systèmes Électroniques et numériques option Audiovisuel et Multimédia</div>"
+    }
+]

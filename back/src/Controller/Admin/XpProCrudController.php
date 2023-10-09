@@ -24,9 +24,9 @@ class XpProCrudController extends AbstractCrudController
             IdField::new('id')
                 ->hideOnForm(),
             TextField::new('title'),
-            TextField::new('city')
-                ->hideOnIndex(),
-            TextField::new('compagny'),
+            TextField::new('city'),
+            TextField::new('company'),
+            // TextField::new('period'),
             TextEditorField::new('description')
                 ->hideOnIndex(),
             BooleanField::new('inProgress')

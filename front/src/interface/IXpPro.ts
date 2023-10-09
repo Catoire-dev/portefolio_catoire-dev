@@ -2,8 +2,8 @@ export interface IXpPro {
     id : number;
     title : string;
     company : string;
-    inProgress : boolean;
     city : string;
-    date : Date;
+    period : string;
     description : string;
+    inProgress : boolean;
 }

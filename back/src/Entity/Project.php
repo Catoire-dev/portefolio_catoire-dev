@@ -2,9 +2,10 @@
 
 namespace App\Entity;
 
-use App\Repository\ProjectRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\ProjectRepository;
+use DateTimeInterface;
 
 #[ORM\Entity(repositoryClass: ProjectRepository::class)]
 class Project
@@ -17,8 +18,9 @@ class Project
     #[ORM\Column(length: 255)]
     private ?string $name = null;
 
-    #[ORM\Column(type: Types::DATE_MUTABLE, nullable: true)]
-    private ?\DateTimeInterface $Date = null;
+
+    #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true)]
+    private ?DateTimeInterface $date = null;
 
     #[ORM\Column(type: Types::TEXT)]
     private ?string $description = null;
@@ -34,6 +36,9 @@ class Project
 
     #[ORM\Column(length: 255)]
     private ?string $link = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $company = null;
 
     public function getId(): ?int
     {
@@ -54,12 +59,12 @@ class Project
 
     public function getDate(): ?\DateTimeInterface
     {
-        return $this->Date;
+        return $this->date;
     }
 
     public function setDate(\DateTimeInterface $Date): static
     {
-        $this->Date = $Date;
+        $this->date = $Date;
 
         return $this;
     }
@@ -120,6 +125,18 @@ class Project
     public function setLink(string $link): static
     {
         $this->link = $link;
+
+        return $this;
+    }
+
+    public function getCompany(): ?string
+    {
+        return $this->company;
+    }
+
+    public function setCompany(?string $company): static
+    {
+        $this->company = $company;
 
         return $this;
     }
