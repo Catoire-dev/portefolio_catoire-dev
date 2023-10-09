@@ -1,0 +1,30 @@
+@import "../../assets/styles/variable.scss";
+
+form {
+    align-items: stretch !important;
+    gap: 10px;
+    input, textarea {
+        border: solid black 3px;
+        border-radius: 24px;
+        padding: 10px;
+    }
+
+    textarea {
+        padding: 10px 15px;
+        width: $width-mobile;
+        min-height: 140px;
+    }
+
+    label {
+        align-self: baseline;
+        font-weight: bold;
+    }
+
+    #submit {
+        border: solid $red 3px;
+        border-radius: 24px;
+        background: 0;
+        font-weight: bold;
+    }
+
+}

@@ -40,7 +40,6 @@ export const Career = () => {
             </section>
             <section id="cv">
                 { xpPros.map(xp => <XpCard data={xp} key={xp.id}/>) } 
-
             </section>
         </main>
     )
