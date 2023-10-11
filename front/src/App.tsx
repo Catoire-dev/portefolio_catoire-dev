@@ -24,7 +24,7 @@ function App() {
     <>
       <section className='box'>
         {
-          (routesInfo[location] && routesInfo[location].prevText) && <ArrowBtn textBtn={routesInfo[location].prevText } bottomBtn={false} path={routesInfo[location].prevPath} />
+          (routesInfo[location] && routesInfo[location].prevText) && <ArrowBtn textBtn={routesInfo[location].prevText } posBtn='top' path={routesInfo[location].prevPath} />
         }
         <Header />
         <Routes>
@@ -38,7 +38,7 @@ function App() {
         </Routes>
       </section>
       {
-        (routesInfo[location] && routesInfo[location].nextText) && <ArrowBtn textBtn={routesInfo[location].nextText } bottomBtn={true} path={routesInfo[location].nextPath} />
+        (routesInfo[location] && routesInfo[location].nextText) && <ArrowBtn textBtn={routesInfo[location].nextText } posBtn='bottom' path={routesInfo[location].nextPath} />
       }
     </>
   )

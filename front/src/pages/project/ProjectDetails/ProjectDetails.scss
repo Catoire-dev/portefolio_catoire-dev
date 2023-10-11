@@ -1,8 +1,40 @@
+@import "../../../assets/styles/variable.scss";
+
 #project-details {
-    padding: 10px;
+    width: 341px;
+    padding: 16px 0;
+    position: relative;
+    gap: 20px;
+}
+#proj-title {
+    align-items: baseline;
+}
+
+#cover, #description, #proj-title {
+    width: 281px;
+    
+}
+
+#btn-see {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#btn-back {
+    margin-top: 20px;
+    align-self: baseline;
 }
 
 #cover {
-    width: 200px;
-    height: auto;
+    object-fit: cover;
+    object-position: 100% 0;
+    height: 156px;
+    
+    align-self: center;
+}
+
+#customer {
+    font-style: italic;
+    color: $red;
 }

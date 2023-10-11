@@ -1,26 +1,49 @@
 @mixin arrow-btn {
     // width: 150px;
-    height: 69px;
-
-    gap: 10px;
+    // height: 69px;
+    display: flex;
+    align-items: center;
+    gap: 2px;
     p {
         text-align: center;
     }
-
     img {
         width: 45.94px;
         height: 14.64px;
     }
 }
 
-.arrow-btn-down {
+.arrow-btn-top {
     @include arrow-btn();
-}
-
-.arrow-btn-up {
-    @include arrow-btn();
+    margin-top: 10px;
     flex-direction: column-reverse;
     img {
         transform: rotate(180deg);
+    }
+}
+
+.arrow-btn-right {
+    @include arrow-btn();
+    flex-direction: row;
+    img {
+        transform: rotate(-90deg);
+        width: 23.94px;
+        height: 12.64px;
+    }
+}
+
+.arrow-btn-bottom {
+    @include arrow-btn();
+    margin-bottom: 10px;
+    flex-direction: column;
+}
+
+.arrow-btn-left {
+    @include arrow-btn();
+    flex-direction: row-reverse;
+    img {
+        transform: rotate(90deg);
+        width: 23.94px;
+        height: 12.64px;
     }
 }

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { IProject } from '../../../interface/IProject'
 import { placeHolderImg } from '../../../utils/utils';
 import '../Projects.scss'
+import { ArrowBtn } from '../../../shared/ArrowBtn';
 
 
 type ProjectCardProps = {
@@ -22,7 +23,8 @@ export const ProjectsCard = ({project}: ProjectCardProps) => {
         <div className="project box">
             <div className='project-title'>
                 <h2>{project.name}</h2>
-                <p>{project.period}</p>
+                {/* <p>{project.period}</p> */}
+                <ArrowBtn textBtn='Details' posBtn='right' path={`/projects/${project.id}`} />
             </div>
             <i>{project.customer}</i>
             <div className='project-content'>
