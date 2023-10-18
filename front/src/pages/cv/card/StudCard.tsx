@@ -14,7 +14,8 @@ export const StudCard = ({data}:CardProps) => {
                 <h2>{data.certificate}</h2>
                 <p>{data.inProgress ? "En cours" : data.period}</p>
             </div>
-            <i>{data.school} - {data.city}</i>
+            <i><span id='company'>{data.school}</span> - <span id='city'>{data.city}</span></i>
+
 
             <p className='cv-card-content' dangerouslySetInnerHTML={{__html: data.description}} />
         </div>

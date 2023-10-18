@@ -6,7 +6,7 @@ import { IXpPro } from '../../../interface/IXpPro';
 const xpPros: IXpPro[] = data.map((d: any) => ({
     id: d.id,
     title : d.title,
-    company : d.school,
+    company : d.company,
     city : d.city,
     period : d.period,
     description : d.description,

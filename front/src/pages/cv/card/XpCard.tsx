@@ -14,7 +14,7 @@ export const XpCard = ({data}:CardProps) => {
                 <h2>{data.title}</h2>
                 <p>{data.period}</p>
             </div>
-            <i>{data.company} - {data.city}</i>
+            <i><span id='company'>{data.company}</span> - <span id='city'>{data.city}</span></i>
 
             <p className='cv-card-content' dangerouslySetInnerHTML={{__html: data.description}} />
         </div>
