@@ -1,5 +1,5 @@
 import { IStudie } from '../../../interface/IStudie';
-import '../cv.scss';
+import './CvCard.scss';
 
 type CardProps = {
     data: IStudie;
@@ -12,7 +12,7 @@ export const StudCard = ({data}:CardProps) => {
         <div className="box card-cv">
             <div className='cv-card-title'>
                 <h2>{data.certificate}</h2>
-                <p>{data.period}</p>
+                <p>{data.inProgress ? "En cours" : data.period}</p>
             </div>
             <i>{data.school} - {data.city}</i>
 
