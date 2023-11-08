@@ -13,15 +13,12 @@
 }
 
 #project-list {
-    // margin-top: 45px;
-
     width: 350px;
 
     @include flex-col;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    // align-items: flex-start;
     gap: 10px;
 }
 

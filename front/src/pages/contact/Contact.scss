@@ -3,6 +3,7 @@
 form {
     align-items: stretch !important;
     gap: 10px;
+    width: $width-mobile;
     input, textarea {
         border: solid black 3px;
         border-radius: 24px;
@@ -11,7 +12,6 @@ form {
 
     textarea {
         padding: 10px 15px;
-        width: $width-mobile;
         min-height: 140px;
     }
 

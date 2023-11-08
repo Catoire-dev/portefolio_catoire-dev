@@ -22,7 +22,7 @@ function App() {
 
   return (
     <>
-      <section className='box'>
+      <section className='box' id='all'>
         {
           (routesInfo[location] && routesInfo[location].prevText) && <ArrowBtn textBtn={routesInfo[location].prevText } posBtn='top' path={routesInfo[location].prevPath} />
         }

@@ -5,6 +5,10 @@
     margin: 0;
     padding: 0;
 }
+body, #root {
+    width: 100%;
+}
+
 ul {
     padding-left: 40px;
 }
@@ -30,7 +34,7 @@ a{
 
 .title-box {
     margin-top: 20px;
-    width: 292px;
+    width: $width-mobile;
     padding: 15px 0;
 
     gap: 10px;
@@ -66,4 +70,13 @@ body, #root {
 main {
     @include flex-col;
     gap: 20px;
+}
+
+// Media Querrie
+
+@media screen and (min-width: $width-tablet) {
+    .title-box {
+        // width: $width-tablet;
+    }
+
 }

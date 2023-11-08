@@ -1,22 +1,19 @@
 @import '../assets/styles/variable.scss';
 
-header {
+.border-head {
     border: solid 2px $red;
-    border-radius: 24px;
+    border-radius: 42px;
+    padding: 5px 8px;
+}
 
-
+header {
     width: 288px;
     margin-top: 20px;
     padding: 10px;
 
-
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-
-    #header-box {
-
-    }
 
     #header-link-box {
         display: flex;
@@ -24,5 +21,34 @@ header {
         justify-content: space-around;
         gap: 10px;
     }
+
+    .selected-item {
+        color: $red;
+    }
 }
 
+@media screen and (min-width: $width-tablet) {
+    header {
+        border: none;
+        border-radius: 0;
+
+        width: 90%;
+
+        display: flex;
+        justify-content: space-between;
+
+        #header-link-box {
+            padding: 8px 13px;
+
+            display: flex;
+        }
+
+        .selected-item {
+            border: solid 2px $red;
+            border-radius: 42px;
+            padding: 5px 8px;
+
+            color: black;
+        }
+    }
+}
