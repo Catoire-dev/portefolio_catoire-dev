@@ -75,8 +75,25 @@ main {
 // Media Querrie
 
 @media screen and (min-width: $width-tablet) {
-    .title-box {
-        // width: $width-tablet;
+
+    main {
+        font-size: 32px;
     }
 
+    .title-box {
+        margin-top: 20px;
+        width: 60%;
+        padding: 15px 0;
+    
+        gap: 10px;
+        h1 {
+            font-size: 64px;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+
+    .border-red {
+        border: solid $red 6px;
+    }
 }
